@@ -1,0 +1,6 @@
+cmake_minimum_required (VERSION 2.8.12.2)
+project (httpclient)
+file(GLOB source_files "*.cpp")
+include_directories(.)
+ADD_LIBRARY(httpclient SHARED ${source_files})
+TARGET_LINK_LIBRARIES(httpclient uuid pthread)
